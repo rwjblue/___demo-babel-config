@@ -16,3 +16,4 @@ The main changes are:
   * Add `babel.config.js` to list of "node" files
   * Change parser to `@babel/eslint-parser`
 
+See [complete diff here](https://github.com/rwjblue/___demo-babel-config/compare/d32cc59...main).
