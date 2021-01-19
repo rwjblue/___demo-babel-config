@@ -7,6 +7,18 @@ module.exports = function (defaults) {
     'ember-cli-babel': {
       useBabelConfig: true,
     },
+    autoImport: {
+      skipBabel: [
+        {
+          // required to avoid ember-auto-import from double transpiling qunit
+          // when the project has a top level `babel.config.js`
+          //
+          //  Remove when https://github.com/ef4/ember-auto-import/pull/342 has landed
+          package: 'qunit',
+          semverRange: '*',
+        },
+      ],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
