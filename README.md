@@ -11,7 +11,9 @@ The main changes are:
 * Add `babel.config.js` file (with very basic config)
 * Install `@babel/preset-env`
 * Install `@babel/eslint-parser`
-* Update `ember-cli-build.js` to opt-in to new babel config APIs
+* Update `ember-cli-build.js`
+  * Opt in to `useBabelConfig: true` API
+  * Temporarily work around [ef4/ember-auto-import#342](https://github.com/ef4/ember-auto-import/pull/342) by adding `qunit` to `skipBabel` configuration in `ember-cli-build.js`
 * Update `.eslintrc.js`
   * Add `babel.config.js` to list of "node" files
   * Change parser to `@babel/eslint-parser`
